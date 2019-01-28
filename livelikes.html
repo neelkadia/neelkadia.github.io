@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Live Likes - Neel Kadia</title>
+  <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="author" content="Neel Kadia">
+  <meta name="description" content="Tiny Facebook fan counter hardware">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="tempo.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+  <style> .caps-center { padding-left: .2em; } .left-align { text-align: left; } </style>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53682312-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body class="measure">
+
+  <header class="center container py2">
+    <div class="inline-block p2 mb0">
+      <h2 class="caps caps-center h2 mb0 inline-block">Live Likes</h2><br><br>
+      <p class="h5 mb0">Ardunio based tiny <b class="h5 mb0" style="color:#3b5998;">Facebook</b> Fan counter</p>
+    </div>
+  </header>
+
+  <section id="grid" class="container px1">
+    <p class="h5 bold mb0 black">What is LiveLikes?</p>
+    <p class="black f5">Livelikes is a tiny device which display Your <b class="black f5" style="color:#3b5998;">Facebook</b> Fan page count in cool wooden mounted LED display.</p>
+  </section>
+
+  <section id="grid" class="container px1 py1">
+    <p class="h5 bold mb0 black">Initial Blue-print Design</p>
+    <img class="measure" src="LiveLikes.png" alt="No Image found" width="100%" height="100%"></img>
+  </section>
+
+  <!-- <section id="grid" class="container px1 py1">
+    <p class="h5 bold mb0 black">Prototype - HelloWorld</p>
+    <p class="black f5">As I am new to Arduino, first I have tested Hello World! and its running fine on a small 8 segemnt LED display. </p>
+    <img class="measure" src="img_display_hello.png" alt="No Image found" width="50%" height="50%">
+  </section> -->
+
+    <section id="grid" class="px1 container py1">
+    <p class="h5 bold mb0 black">Coding</p>
+    <!-- <p class="leading-2 h3 col-8 col-pre-2 mb5">Front Side</p> -->
+    <p class="black f5">Cpp program (.INO file) which can fetch Facebook like from the page id. Its live, It will refresh on every 800 Milisecond</p>
+    <img class="leading-2 h2 mb0" src="code.png" alt="No Image found" width="100%" height="60%">
+    </section>
+
+    <section id="grid" class="px1 container py1">
+    <p class="h5 bold mb0 black">Visualizing and Testing</p>
+    <!-- <p class="leading-2 h3 col-8 col-pre-2 mb5">Front Side</p> -->
+    <p class="black f5">As the below PCB circuit diagram, I have connected the UNO, Ethernet shield and LCD shield to Internet via ASDL router.</p>
+    <img class="leading-2 h2 mb0" src="pcb.png" alt="No Image found" width="100%" height="60%">
+    </section>
+
+
+    <section id="grid" class="px1 container py1">
+    <p class="h5 bold mb0 black">Prototype</p>
+    <!-- <p class="leading-2 h3 col-8 col-pre-2 mb5">Front Side</p> -->
+    <p class="black f5">As shown below video, I have made a prototype of LiveLikes that displays Facebook's own <b class="black f5" style="color:#3b5998;">Facebook</b> page likes and updates on every 0.5 second.</p>
+  <video width="480" height="320" controls>
+    <source src="livelikes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+    </section>
+
+
+  </section>
+
+
+
+
+  <section id="cta" class="container center py4">
+    <h1 class="h2 mb0">It's now open sourced!</h1>
+    <p class="mb2">Fork and make your own!</p>
+    <a href="https://github.com/neelkadia/FacebookLiveLikes" class="p button button-blue">Fork LiveLikes on GitHub</a>
+  </section>
+
+
+  <footer class="center container py4">
+    <p class="leading-3 f5 black">
+      <br class="mobile-show">
+      Made with <span style="color: #f7403a">&hearts;</span> by <a href="https://www.neelkadia.com">Neel Kadia</a> in India
+    </p>
+  </footer>
+
+</body>
+</html>

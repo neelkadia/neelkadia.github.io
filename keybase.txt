@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/neelkadia
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://neelkadia.com
+  * I am neelkadia (https://keybase.io/neelkadia) on keybase.
+  * I have a public key ASD_vyHlg8GoI781h5qj2jbnDQam-62xGzu2vzUaFthzAQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ffbf21e583c1a823bf35879aa3da36e70d06a6fbadb11b3bb6bf351a16d873010a",
+      "host": "keybase.io",
+      "kid": "0120ffbf21e583c1a823bf35879aa3da36e70d06a6fbadb11b3bb6bf351a16d873010a",
+      "uid": "95f076639d9a5e2da3171d8942910919",
+      "username": "neelkadia"
+    },
+    "merkle_root": {
+      "ctime": 1502349564,
+      "hash": "eac7ecfc5d7e0d51b513cd60551eb00f1e9a4a53aacede6d288552e785deaf495d739709c905c3586dded464532ded10d93ec707ce2183dbae56d04f5d139eb1",
+      "hash_meta": "ef318eef96047923f8211f9d92464dae4315f6dde647fcbca30a7b2b68891021",
+      "seqno": 1317063
+    },
+    "service": {
+      "hostname": "neelkadia.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.27"
+  },
+  "ctime": 1502349628,
+  "expire_in": 504576000,
+  "prev": "6abed78baa085bc4423f001a468729a5d07281fb11fd2c04aa8a43b753d1f159",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/78h5YPBqCO/NYeao9o25w0GpvutsRs7tr81GhbYcwEKp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZmZiZjIxZTU4M2MxYTgyM2JmMzU4NzlhYTNkYTM2ZTcwZDA2YTZmYmFkYjExYjNiYjZiZjM1MWExNmQ4NzMwMTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZmZiZjIxZTU4M2MxYTgyM2JmMzU4NzlhYTNkYTM2ZTcwZDA2YTZmYmFkYjExYjNiYjZiZjM1MWExNmQ4NzMwMTBhIiwidWlkIjoiOTVmMDc2NjM5ZDlhNWUyZGEzMTcxZDg5NDI5MTA5MTkiLCJ1c2VybmFtZSI6Im5lZWxrYWRpYSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwMjM0OTU2NCwiaGFzaCI6ImVhYzdlY2ZjNWQ3ZTBkNTFiNTEzY2Q2MDU1MWViMDBmMWU5YTRhNTNhYWNlZGU2ZDI4ODU1MmU3ODVkZWFmNDk1ZDczOTcwOWM5MDVjMzU4NmRkZWQ0NjQ1MzJkZWQxMGQ5M2VjNzA3Y2UyMTgzZGJhZTU2ZDA0ZjVkMTM5ZWIxIiwiaGFzaF9tZXRhIjoiZWYzMThlZWY5NjA0NzkyM2Y4MjExZjlkOTI0NjRkYWU0MzE1ZjZkZGU2NDdmY2JjYTMwYTdiMmI2ODg5MTAyMSIsInNlcW5vIjoxMzE3MDYzfSwic2VydmljZSI6eyJob3N0bmFtZSI6Im5lZWxrYWRpYS5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjI3In0sImN0aW1lIjoxNTAyMzQ5NjI4LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjZhYmVkNzhiYWEwODViYzQ0MjNmMDAxYTQ2ODcyOWE1ZDA3MjgxZmIxMWZkMmMwNGFhOGE0M2I3NTNkMWYxNTkiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEB5tZ8qkvjQYmBZAyJEITvH0Mi5sTN6MVgfQAi727xyuL+Zn+87nPgJWY9OYpHWR8QILX3WIeOT89vo3n6hJW0HqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg08o7QLiUptr6TWBJdpdxcn464yeei0ftbiSIYzB25D+jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/neelkadia
+
+==================================================================
