@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Where are you? - Neel Kadia</title>
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <meta name="author" content="Neel Kadia">
+  <meta name="description" content="Where are you? - Real time location tracking with Android App and Web via Chrome extension">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Merriweather:400,400italic,700|Source+Code+Pro" rel="stylesheet">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet'/>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="icon" href="favicon.png">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53682312-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body class="">
+  <section id="mainsec" class="container px1 py1">
+    <div class="measure">
+      <h2 class="sans black">Where are you, Neel?</h2>
+      <p class="f5 black bold">My location tracking in realtime, Publicly available.</p>
+
+      <div id='map' style='width: 100%; height: 340px;'></div>
+<p id="ago" class="f5 black">Last seen : </p>
+      <!-- Map Script -->
+      <script src="moment.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: 'AIzaSyD6AImxpD1XoH2Evvd6-HitbwT-G9zkMkc',
+      databaseURL: 'https://whereareyou-7a1b8.firebaseio.com/',
+      storageBucket: 'whereareyou-7a1b8'
+    };
+    firebase.initializeApp(config)
+
+    // Get a reference to the database service
+    firebase.database().ref().on('value', function(snapshot) {
+    var finaldata = JSON.stringify(snapshot.val());
+    console.log(finaldata);
+  
+    finaldata = finaldata.replace(/"/g, "'");
+    var ultrafinal = JSON.stringify(eval("(" + finaldata + ")"));
+    var obj = JSON.parse(ultrafinal);
+    var Time = obj.geometry.coordinates[2];
+
+    //Load Map
+    mapboxgl.accessToken = 'pk.eyJ1IjoibmVlbGthZGlhIiwiYSI6ImNqeXBmdGNtdzAzeDMzY3F6Nm1sN3E1aHEifQ.qi1-Grml--s9mQHvDRZDBw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8',
+         center: [obj.geometry.coordinates[1], obj.geometry.coordinates[0]],
+         zoom: 16.5,
+         interactive: true
+    });
+
+    console.log("Last seen:"+moment(Time).fromNow());
+    document.getElementById("ago").innerHTML = 'Last seen: '+moment(Time).fromNow();
+    map.on('style.load', function () {
+
+    map.addSource("markers", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [obj.geometry.coordinates[1], obj.geometry.coordinates[0]]
+                },
+                "properties": {
+                    "title": "Neel",
+                    "marker-color" : "#405660",
+                    "marker-size": "large",
+                    "marker-symbol": "marker"
+                }
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "markers",
+        "type": "symbol",
+        "source": "markers",
+        "layout": {
+            "icon-image": "{marker-symbol}-15",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold, Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+});
+
+    });
+  </script>
+
+  <div class="h5 sans">FAQs</div>
+  <p class="f5 sans py1 black">
+      <b>Is this FindMyFriend for Android kind of thing?</b><br>
+      Yes. You can share your location and anyone on web can check where are you.
+      <br><br>
+
+      <b>Why you made your location publicliy avalible?</b><br>
+      Because people like you keep asking me on Messengers &amp; calls that <b>Where am I?</b> while I was busy doing intresting stuff. Now they can visit and check where I am.
+    <br><br>
+    <b>What about your privacy?</b><br>
+    It will be frightful. But I'm running this experiment for only <b>few days</b>.
+    <br><br>
+
+    <b>What will be your next step?</b><br>
+    Right now I am working on a bot which answers usual questions about me like Where am I? Am I busy? Can we meet for lunch/dinner? My bot will check the schedule and reply those people.
+  <br><br>
+
+    <b>If I want to find your other work...</b><br>
+      Ya, then you can browse and experiment with the stuff I made <a href="https://web.archive.org/web/20180807134555/http://www.neelkadia.com/">here</a>.<br><br>
+
+        <b>What's your favourite quote?</b><br>
+      I have many and <a href="https://web.archive.org/web/20180807134555/http://neelkadia.github.io/quotes.html">here</a> is the list.<br><br>
+
+      <span class="mr0"><br><br>
+            <a class="absolute-left p button button-box-blue" href="https://web.archive.org/web/20180807134555/https://github.com/neelkadia/WhereaAreYou">
+            &nbsp;Fork me on Github</a>
+
+            <span class="right p button normal">
+            Made with <span style="color: #f7403a">♥</span> for Mom</span>
+          </span>
+      <!-- <b>Umm, you single?</b></br>
+    <b>No,</b> I am not. I love her as many times there are atoms in the universe.
+    </br> -->
+    </p>
+  <a class="f5 black caps" href="https://neelkadia.com">← HOME</a></div>
+  </section>
+</body>
+</html>
