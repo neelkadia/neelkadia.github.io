@@ -9,8 +9,8 @@
   <meta name="description" content="Where are you? - Real time location tracking with Android App and Web via Chrome extension">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Merriweather:400,400italic,700|Source+Code+Pro" rel="stylesheet">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet'/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet'/>
   <link rel="stylesheet" href="style1.css" />
   <link rel="icon" href="favicon.png">
   <script>
@@ -56,7 +56,7 @@
     var Time = obj.geometry.coordinates[2];
 
     //Load Map
-    mapboxgl.accessToken = 'pk.eyJ1IjoibmVlbGthZGlhIiwiYSI6ImNqeXBmdGNtdzAzeDMzY3F6Nm1sN3E1aHEifQ.qi1-Grml--s9mQHvDRZDBw';
+    mapboxgl.accessToken = 'pk.eyJ1IjoibmVlbGthZGlhIiwiYSI6ImNqeXBmYWFmdzFiMWIzbnV3aGplcjhycXQifQ.Z3695vl382jYfWumirmyYQ';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v8',
